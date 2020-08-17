@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+		
+	</script>
+		<title>Southern ITF Taekwon-Do - Student Manual</title>
+		<script language="JavaScript">
+			if (document.all || document.layers)
+			{
+				var width = screen.availwidth;
+				var height = screen.availheight;
+				
+				if (width > 830)
+					width = 830;
+				
+				if (height > 780)
+					height = 780;
+				
+				self.resizeTo(width, height)
+				self.moveTo( ((screen.availwidth / 2) - (width / 2)), ((screen.availheight / 2) - (height / 2)));
+			}
+			
+			menuimgName = new Array(4);
+			menuimgOn = new Array(4);
+			menuimgOff = new Array(4);
+			
+			menuimgName[1] = "syllabusButton";
+			menuimgOff[1]= new Image (65,23);
+			menuimgOff[1].src="images/syllabusButtonOff.gif";
+			menuimgOn[1]= new Image (65,23);
+			menuimgOn[1].src="images/syllabusButtonOn.gif";
+			
+			menuimgName[2] = "aboutClubButton";
+			menuimgOff[2]= new Image (107,23);
+			menuimgOff[2].src="images/aboutClubButtonOff.gif";
+			menuimgOn[2]= new Image (107,23);
+			menuimgOn[2].src="images/aboutClubButtonOn.gif";
+			
+			menuimgName[3] = "aboutTaekwondoButton"
+			menuimgOff[3]= new Image (90,23);
+			menuimgOff[3].src="images/aboutTaekwondoButtonOff.gif";
+			menuimgOn[3]= new Image (90,23);
+			menuimgOn[3].src="images/aboutTaekwondoButtonOn.gif";
+			
+			menuimgName[4] = "studentDetailsButton"
+			menuimgOff[4]= new Image (109,23);
+			menuimgOff[4].src="images/studentDetailsButtonOff.gif";
+			menuimgOn[4]= new Image (109,23);
+			menuimgOn[4].src="images/studentDetailsButtonOn.gif";
+			
+			graphicsFileLoadComplete = 1;
+			isBrowserValid = 1;
+			
+			function imageChange(imageName, on)
+			{
+				if ( isBrowserValid && graphicsFileLoadComplete )
+				{
+					var imageID = "";
+					
+					for (i = 1; i < menuimgName.length; i++)
+					{
+						if (menuimgName[i] == imageName)
+							imageID = i;
+					}
+					
+					if (imageID == "")
+						return;
+					else
+					{
+						if (on)
+							document[imageName].src = menuimgOn[imageID].src;
+						else
+							document[imageName].src = menuimgOff[imageID].src;
+					}
+				}
+			}
+		</script>
+		<style>
+			body 
+			{
+				background-color: #0404a9;
+			}
+			.background
+			{
+				position: relative;
+                top: 0;
+                left: 300px;
+			}
+			.links
+			{
+				position: absolute;
+                top: -283px;
+                left: 180px;
+			}
+			.navbar
+			{
+				position: absolute;
+                top: 130px;
+                left: 580px;
+			}
+			.content
+			{
+				position: absolute;
+                top: 200px;
+                left: 350px;
+			}
+		</style>
+	</head>
+	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		
+		<div style="position: relative; left: 0; top: 0;">
+			<img src="images/Header-Logo.gif" width="800" alt="" class="background">
+			<table width="800" height="800" border="0" cellpadding="0" cellspacing="0" class="links">
+				<tr>
+					<td colspan="2" background="" align="right" nowrap><a href="pages/syllabus.html" target="content" onClick="navbar.hideImages();" onmouseover="imageChange('syllabusButton', true);" onmouseout="imageChange('syllabusButton', false);"><img align="absmiddle" name="syllabusButton" src="images/syllabusButtonOff.gif" width="65" height="23" border="0" alt="Syllabus"></a><img align="absmiddle" src="images/redDivider.gif" width="7" height="23" alt=""><a href="pages/aboutClub.html" target="content"  onClick="navbar.hideImages();"  onmouseover="imageChange('aboutClubButton', true);" onmouseout="imageChange('aboutClubButton', false);"><img align="absmiddle" name="aboutClubButton" src="images/aboutClubButtonOff.gif" width="107" height="23" border="0" alt="About our Club"></a><img align="absmiddle" src="images/redDivider.gif" width="7" height="23" alt=""><a href="pages/aboutTaekwondo.html" target="content"  onClick="navbar.hideImages();"  onmouseover="imageChange('aboutTaekwondoButton', true);" onmouseout="imageChange('aboutTaekwondoButton', false);"><img align="absmiddle" name="aboutTaekwondoButton" src="images/aboutTaekwondoButtonOff.gif" width="90" height="23" border="0" alt="About Taekwon-Do"></a><img align="absmiddle" src="images/redDivider.gif" width="7" height="23" alt=""><a href="studentDetails.html" target="content"  onClick="navbar.hideImages();" onmouseover="imageChange('studentDetailsButton', true);" onmouseout="imageChange('studentDetailsButton', false);"><img align="absmiddle" name="studentDetailsButton" src="images/studentDetailsButtonOff.gif" width="109" height="23" border="0" alt="Student Details"></a></td>
+				</tr>
+			</table>
+			<table width="800" height="800" border="0" cellpadding="0" cellspacing="0" class="navbar">
+				<tr>
+					<td colspan="2" width="444" height="55" valign="top"><iframe frameborder="0" name="navbar" border="0" width="444" height="55" scrolling="no" src="pages/navbar.html"></iframe></td>
+				</tr>
+			</table>
+		<table width="700" height="500" border="0" cellpadding="0" cellspacing="0" class="content">
+			<tr>
+				<td colspan="4" rowspan="3" height="100%" width="100%" valign="top"><iframe frameborder="0" name="content" border="0" width="100%" height="100%" src="studentDetails.html">Your internet browser doesn't support iFrames.<br>You will need to upgrade your browser to use this manual</iframe></td>
+			</tr>
+		</table>	
+		</div>
+	</body>
+</html>
