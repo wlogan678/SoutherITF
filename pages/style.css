@@ -98,3 +98,6 @@ table.info {
   padding: 0px;
   background-color: #ffffdd;
 }
+table td, table td * {
+  vertical-align: top;
+}
