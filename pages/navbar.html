@@ -2,7 +2,7 @@
 	currentRank = null;
 	imagesHidden = true;
 
-	capList = new Array(5);
+	//capList = new Array(5);
 	beltList = new Array(11);
 	menuimgName = new Array(5);
 	menuimgOn = new Array(5);	
@@ -38,8 +38,8 @@
 	menuimgOn[5]= new Image (104,32);
 	menuimgOn[5].src="../images/reqButtonOn.gif";		
 
-	for (var i = 0; i < 5; i++)
-		capList[i] = new Image (34,14);
+	//for (var i = 0; i < 5; i++)
+		//capList[i] = new Image (34,14);
 
 	for (var i = 0; i < 11; i++)
 		beltList[i] = new Image (237,30);
@@ -113,7 +113,7 @@ function loadPage(page)
 			else if (page == "theory.html")
 				colourID = 4;
 
-			document['stripeCap'].src = capList[colourID].src;
+			//document['stripeCap'].src = capList[colourID].src;
 		}
 	}
 }
@@ -163,7 +163,7 @@ function reloadImages()
 
 function hideImages()
 {
-	document['stripeCap'].src = "../images/spacer.gif";
+	//document['stripeCap'].src = "../images/spacer.gif";
 	document['beltImage'].src = "../images/spacer.gif";
 
 	for (i = 1; i < menuimgName.length; i++)
@@ -183,17 +183,15 @@ a.link {
 }
 </style>
 <body margin="0" leftmargin="0" rightmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	<table align="right"  height="55" border="0" cellspacing="0" cellpadding="0">
+	<table align="right"  height="0" border="0" cellspacing="0" cellpadding="0">
 		<tr>
-			<td colspan="3" height="36" align="right" valign="top"><a href="#" onClick="loadPage('req.html');" onmouseOver="imageChange('reqButton', true);" onmouseout="imageChange('reqButton', false);"><img border="0" name="reqButton" src="../images/reqButtonOff.gif" width="104" height="32" alt=""></a><a href="#"  onClick="loadPage('stances.html');" onmouseOver="imageChange('stancesButton', true);" onmouseout="imageChange('stancesButton', false);"><img border="0" name="stancesButton" src="../images/stancesButtonOff.gif" width="73" height="32" alt=""></a><a href="#"  onClick="loadPage('patterns.html');" onmouseOver="imageChange('patternsButton', true);" onmouseout="imageChange('patternsButton', false);"><img border="0" name="patternsButton" src="../images/patternsButtonOff.gif" width="78" height="32" alt=""></a><a href="#"  onClick="loadPage('sparring.html');"  onmouseOver="imageChange('sparringButton', true);" onmouseout="imageChange('sparringButton', false);"><img border="0" name="sparringButton" src="../images/sparringButtonOff.gif" width="77" height="32" alt=""></a><a href="#"  onClick="loadPage('theory.html');" onmouseOver="imageChange('theoryButton', true);" onmouseout="imageChange('theoryButton', false);"><img border="0" name="theoryButton" src="../images/theoryButtonOff.gif" width="69" height="32" alt=""></a><img src="../images/spacer.gif" width="7" height="7" alt="">
+			<td colspan="3" height="40" align="right" valign="top"><a href="#show" onClick="loadPage('req.html');" onmouseOver="imageChange('reqButton', true);" onmouseout="imageChange('reqButton', false);"><img border="0" name="reqButton" src="../images/reqButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('stances.html');" onmouseOver="imageChange('stancesButton', true);" onmouseout="imageChange('stancesButton', false);"><img border="0" name="stancesButton" src="../images/stancesButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('patterns.html');" onmouseOver="imageChange('patternsButton', true);" onmouseout="imageChange('patternsButton', false);"><img border="0" name="patternsButton" src="../images/patternsButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('sparring.html');"  onmouseOver="imageChange('sparringButton', true);" onmouseout="imageChange('sparringButton', false);"><img border="0" name="sparringButton" src="../images/sparringButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('theory.html');" onmouseOver="imageChange('theoryButton', true);" onmouseout="imageChange('theoryButton', false);"><img border="0" name="theoryButton" src="../images/theoryButtonOff.gif" height="40" alt=""></a><img src="../images/spacer.gif" width="7" height="7" alt="">
 			</td>
 		</tr>
 		<tr>
 			<td valign="middle" height="14" align="right"><img valign="absmiddle" name="beltImage" src="../images/syllabus_29.gif" height="17" alt="">
 			</td>
 			<td align="right" valign="bottom" height="14"><font face="verdana, arial" size="2"><a class="link" href="#" onClick="parent.content.focus(); parent.content.print()"><img src="../images/printer.gif" align="absmiddle" border="0" width="19" height="19" alt="">Print Page</a></font>
-			</td>
-			<td align="right" valign="bottom" height="14"><img align="absbottom" name="stripeCap" src="../images/capOrange.gif" width="34" height="14" alt=""><img src="../images/spacer.gif" width="7" height="7" alt="">
 			</td>
 		</tr>
 		<tr>
