@@ -2,7 +2,6 @@
 	currentRank = null;
 	imagesHidden = true;
 
-	//capList = new Array(5);
 	beltList = new Array(11);
 	menuimgName = new Array(5);
 	menuimgOn = new Array(5);	
@@ -36,19 +35,10 @@
 	menuimgOff[5]= new Image (104,32);
 	menuimgOff[5].src="../images/reqButtonOff.gif";
 	menuimgOn[5]= new Image (104,32);
-	menuimgOn[5].src="../images/reqButtonOn.gif";		
-
-	//for (var i = 0; i < 5; i++)
-		//capList[i] = new Image (34,14);
+	menuimgOn[5].src="../images/reqButtonOn.gif";
 
 	for (var i = 0; i < 11; i++)
 		beltList[i] = new Image (237,30);
-
-	//capList[0].src = "../images/capOrange.gif";
-	//capList[1].src = "../images/capWhite.gif";
-	//capList[2].src = "../images/capGreen.gif";
-	//capList[3].src = "../images/capBlue.gif";
-	//capList[4].src = "../images/capPink.gif";
 
 	beltList[0].src = "../images/syllabus_02.gif";	// 1st Dan
 	beltList[1].src = "../images/syllabus_08.gif";	// 1st Gup
@@ -112,8 +102,6 @@ function loadPage(page)
 				colourID = 3;
 			else if (page == "theory.html")
 				colourID = 4;
-
-			//document['stripeCap'].src = capList[colourID].src;
 		}
 	}
 }
@@ -126,7 +114,6 @@ function changeRank(newRank)
 
 function reloadImages()
 {
-	//document['stripeCap'].src = "../images/capOrange.gif";
 
 	if (currentRank == 'dan01')
 		beltID = 0;
@@ -163,7 +150,6 @@ function reloadImages()
 
 function hideImages()
 {
-	//document['stripeCap'].src = "../images/spacer.gif";
 	document['beltImage'].src = "../images/spacer.gif";
 
 	for (i = 1; i < menuimgName.length; i++)
