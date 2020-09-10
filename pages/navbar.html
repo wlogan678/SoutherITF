@@ -1,41 +1,33 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<link rel="StyleSheet" href="../pages/style.css" type="text/css">
+<script>
 	currentRank = null;
-	imagesHidden = true;
+	buttonsHidden = true;
 
 	beltList = new Array(11);
-	menuimgName = new Array(5);
-	menuimgOn = new Array(5);	
-	menuimgOff = new Array(5);	
+	menuName = new Array(5);
+	menuOn = new Array(5);	
+	menuOff = new Array(5);	
 	
-	menuimgName[1] = "theoryButton";
-	menuimgOff[1]= new Image (69,32);
-	menuimgOff[1].src="../images/theoryButtonOff.gif";
-	menuimgOn[1]= new Image (69,32);
-	menuimgOn[1].src="../images/theoryButtonOn.gif";	
+	menuName[1] = "theoryButton";
+	menuOff[1]= new Image (69,32);
+	menuOn[1]= new Image (69,32);	
 
-	menuimgName[2] = "sparringButton";
-	menuimgOff[2]= new Image (77,32);
-	menuimgOff[2].src="../images/sparringButtonOff.gif";
-	menuimgOn[2]= new Image (77,32);
-	menuimgOn[2].src="../images/sparringButtonOn.gif";	
+	menuName[2] = "sparringButton";
+	menuOff[2]= new Image (77,32);
+	menuOn[2]= new Image (77,32);	
 
-	menuimgName[3] = "patternsButton";
-	menuimgOff[3]= new Image (77,32);
-	menuimgOff[3].src="../images/patternsButtonOff.gif";
-	menuimgOn[3]= new Image (77,32);
-	menuimgOn[3].src="../images/patternsButtonOn.gif";
+	menuName[3] = "patternsButton";
+	menuOff[3]= new Image (77,32);
+	menuOn[3]= new Image (77,32);
 
-	menuimgName[4] = "stancesButton";
-	menuimgOff[4]= new Image (73,32);
-	menuimgOff[4].src="../images/stancesButtonOff.gif";
-	menuimgOn[4]= new Image (73,32);
-	menuimgOn[4].src="../images/stancesButtonOn.gif";	
+	menuName[4] = "stancesButton";
+	menuOff[4]= new Image (73,32);
+	menuOn[4]= new Image (73,32);
 
-	menuimgName[5] = "reqButton";
-	menuimgOff[5]= new Image (104,32);
-	menuimgOff[5].src="../images/reqButtonOff.gif";
-	menuimgOn[5]= new Image (104,32);
-	menuimgOn[5].src="../images/reqButtonOn.gif";
+	menuName[5] = "reqButton";
+	menuOff[5]= new Image (104,32);
+	menuOn[5]= new Image (104,32);
 
 	for (var i = 0; i < 11; i++)
 		beltList[i] = new Image (237,30);
@@ -56,26 +48,26 @@
 	isBrowserValid = 1;
 
 
-function imageChange(imageName, on)
+function buttonChange(buttonName, on)
 {
-	if ( isBrowserValid && graphicsFileLoadComplete && !imagesHidden)
+	if ( isBrowserValid && graphicsFileLoadComplete && !buttonsHidden)
 	{
-		var imageID = "";
+		var buttonID = "";
 
-		for (i = 1; i < menuimgName.length; i++)
+		for (i = 1; i < menuName.length; i++)
 		{
-			if (menuimgName[i] == imageName)
-				imageID = i;
+			if (menuName[i] == buttonName)
+				buttonID = i;
 		}
 
-		if (imageID == "")
+		if (buttonID == "")
 			return;
 		else
 		{
 			if (on)
-				document[imageName].src = menuimgOn[imageID].src;
+				document[buttonName].src = menuOn[buttonID].src;
 			else
-				document[imageName].src = menuimgOff[imageID].src;
+				document[buttonName].src = menuOff[buttonID].src;
 		}
 	}
 }
@@ -83,7 +75,7 @@ function imageChange(imageName, on)
 
 function loadPage(page)
 {
-	if (!imagesHidden)
+	if (!buttonsHidden)
 	{
 		parent.content.location="../"+currentRank+"/"+page;
 
@@ -109,10 +101,10 @@ function loadPage(page)
 function changeRank(newRank)
 {
 	currentRank = newRank;
-	reloadImages();
+	reloadButtons();
 }
 
-function reloadImages()
+function reloadButtons()
 {
 
 	if (currentRank == 'dan01')
@@ -140,24 +132,24 @@ function reloadImages()
 
 	document['beltImage'].src = beltList[beltID].src;
 
-	for (i = 1; i < menuimgName.length; i++)
+	for (i = 1; i < menuName.length; i++)
 	{
-		imageName = menuimgName[i];
-		document[imageName].src = menuimgOff[i].src;
+		buttonName = menuName[i];
+		document[buttonName].src = menuOff[i].src;
 	}
-	imagesHidden = false;
+	buttonsHidden = false;
 }
 
-function hideImages()
+function hideButtons()
 {
 	document['beltImage'].src = "../images/spacer.gif";
 
-	for (i = 1; i < menuimgName.length; i++)
+	for (i = 1; i < menuName.length; i++)
 	{
-		imageName = menuimgName[i];
+		buttonName = menuName[i];
 		document[imageName].src = "../images/spacer.gif";
 	}
-	imagesHidden = true;
+	buttonsHidden = true;
 }
 
 </script>
@@ -169,9 +161,9 @@ a.link {
 }
 </style>
 <body margin="0" leftmargin="0" rightmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	<table align="right"  height="0" border="0" cellspacing="0" cellpadding="0">
+	<table align="center" width="560" height="0" border="0" cellspacing="0" cellpadding="0">
 		<tr>
-			<td colspan="3" height="40" align="right" valign="top"><a href="#show" onClick="loadPage('req.html');" onmouseOver="imageChange('reqButton', true);" onmouseout="imageChange('reqButton', false);"><img border="0" name="reqButton" src="../images/reqButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('stances.html');" onmouseOver="imageChange('stancesButton', true);" onmouseout="imageChange('stancesButton', false);"><img border="0" name="stancesButton" src="../images/stancesButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('patterns.html');" onmouseOver="imageChange('patternsButton', true);" onmouseout="imageChange('patternsButton', false);"><img border="0" name="patternsButton" src="../images/patternsButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('sparring.html');"  onmouseOver="imageChange('sparringButton', true);" onmouseout="imageChange('sparringButton', false);"><img border="0" name="sparringButton" src="../images/sparringButtonOff.gif" height="40" alt=""></a><a href="#show"  onClick="loadPage('theory.html');" onmouseOver="imageChange('theoryButton', true);" onmouseout="imageChange('theoryButton', false);"><img border="0" name="theoryButton" src="../images/theoryButtonOff.gif" height="40" alt=""></a><img src="../images/spacer.gif" width="7" height="7" alt="">
+			<td colspan="3" height="40" align="center" valign="top"><a href="#show" onClick="loadPage('req.html');" class="LinksButtons">Requirements<img name="reqButton" alt=""></a><a href="#show" onClick="loadPage('stances.html');" class="LinksButtons">Stances<img name="stancesButton" alt=""></a><a href="#show"  onClick="loadPage('fundamental-movements.html');" class="LinksButtons">Fundamentals<img name="theoryButton" alt=""></a><a href="#show"  onClick="loadPage('kicks.html');" class="LinksButtons">Kicks<img name="theoryButton" alt=""></a><a href="#show"  onClick="loadPage('patterns.html');" class="LinksButtons">Patterns<img name="patternsButton" alt=""></a><a href="#show"  onClick="loadPage('sparring.html');"  class="LinksButtons">Sparring<img name="sparringButton" alt=""></a><a href="#show"  onClick="loadPage('self-defence.html');" class="LinksButtons">Self Defence<img name="theoryButton" alt=""></a><a href="#show"  onClick="loadPage('breaks.html');" class="LinksButtons">Breaks<img name="theoryButton" alt=""></a><a href="#show"  onClick="loadPage('theory.html');" class="LinksButtons">Theory<img name="theoryButton" alt=""></a><img src="../images/spacer.gif" width="7" height="7" alt="">
 			</td>
 		</tr>
 		<tr>
@@ -183,6 +175,6 @@ a.link {
 	</table>
 	<script>
 		if (currentRank == null)
-			hideImages();
+			hideButtons();
 	</script>
 </body>
