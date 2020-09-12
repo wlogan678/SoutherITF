@@ -110,12 +110,12 @@ table td, table td * {
 	background:-moz-linear-gradient( center top, #ffec64 5%, #ffab23 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23');
 	background-color:#ffec64;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topleft:0px;
-	border-top-left-radius:0px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
-	border-top-right-radius:0px;
+	-webkit-border-top-left-radius:15px;
+	-moz-border-radius-topleft:15px;
+	border-top-left-radius:15px;
+	-webkit-border-top-right-radius:15px;
+	-moz-border-radius-topright:15px;
+	border-top-right-radius:15px;
 	-webkit-border-bottom-right-radius:15px;
 	-moz-border-radius-bottomright:15px;
 	border-bottom-right-radius:15px;
