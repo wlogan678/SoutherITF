@@ -4,6 +4,11 @@
 	<head>
 		<title>Southern ITF Taekwon-Do - Student Manual</title>
 		<script language="JavaScript">
+			function goBack() {
+				content.history.back();
+				navbar.hideButtons();
+			}
+			
 			if (document.all || document.layers)
 			{
 				var width = screen.availwidth;
@@ -98,19 +103,24 @@
 			<img src="images/Header-Logo.gif" width="1040" alt="" class="background">
 			<table width="825" height="370" border="0" cellpadding="0" cellspacing="0" class="content">
 				<tr>
-					<td colspan="4" rowspan="3" height="370" width="825" valign="top"><iframe frameborder="0" name="content" border="0" height="370" width="800" src="pages/syllabus.html">Your internet browser doesn't support iFrames.<br>You will need to upgrade your browser to use this manual</iframe></td>
+					<td colspan="4" rowspan="3" height="370" width="825" valign="top"><iframe frameborder="0" name="content" border="0" height="370" width="800" src="pages/syllabus.html">Your internet browser doesn't support iFrames.<br>You will need to upgrade your browser to use this manual</iframe>
 				</tr>
 			</table>
 			<table width="825" height="60" border="0" cellpadding="0" cellspacing="0" class="navbar">
 			  <tr>
 			    <td colspan="2" width="825" height="60" valign="top"><iframe frameborder="0" name="navbar" border="0" width="825" height="60" scrolling="no" src="pages/navbar.html"></iframe></td>
 		      </tr>
-		  </table>
+			</table>
 			<table border="0" cellpadding="0" cellspacing="0" class="links">
 				<tr>
-					<td colspan="1" background="" align="right" nowrap><a href="pages/syllabus.html" target="content" onClick="navbar.hideButtons();" onmouseover="imageChange('syllabusButton', true);" onmouseout="imageChange('syllabusButton', false);"><img align="absmiddle" name="syllabusButton" src="images/syllabusButtonOff.gif" height="31" border="0" alt="Syllabus"></a></td>
+					<td colspan="1" background="" align="right" nowrap><a href="pages/syllabus.html" target="content" onClick="navbar.hideButtons();" onmouseover="imageChange('syllabusButton', true);" onmouseout="imageChange('syllabusButton', false);"><img align="absmiddle" name="syllabusButton" src="images/syllabusButtonOff.gif" height="31" border="0" alt="Syllabus"></a></td></td>
+						<td width="70" class="header" colspan="1" onclick="goBack()">&laquo; Go Back </td>
 				</tr>
 			</table>	
 		</div>
+	<script>
+		if (currentRank == null)
+			hideButtons();
+	</script>
 	</body>
 </html>
