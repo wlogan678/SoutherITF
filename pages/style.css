@@ -13,6 +13,13 @@ BODY {
   margin-bottom: 0px;
   margin-right: 5px;
 }
+DIV
+{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 h1 {
   text-align: right;
   font-face: verdana, arial;
@@ -146,4 +153,19 @@ table td, table td * {
 }.LinksButtons:active {
 	position:relative;
 	top:1px;
+}
+input.my_button
+{
+width:80%;
+height:50%;
+padding:inherit;
+display:table;
+margin:0 auto;
+}
+@media screen and (max-width:100%)
+{
+	input.my_button
+	{
+		width:100%;
+	}
 }
