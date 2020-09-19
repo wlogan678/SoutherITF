@@ -1,5 +1,4 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<link rel="StyleSheet" href="../pages/style.css" type="text/css">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <html>
 	<head>
@@ -9,75 +8,79 @@
 			{
 				background-color:#0404a9;
 			}
-			table
-			{
-				position:relative;
-				padding-top:13.5%;
-			}
 			.background
 			{   
 				position:fixed;
 			}
-			.founders
-			{
-			}
 			.content
 			{
+				overflow:hidden;
+				height:100%;
+				width:100%;
+				padding-bottom:0%;
+			}
+			.iframe-container 
+			{
+				overflow: hidden;
+				/* 16:9 aspect ratio */
+				padding-top: 59%;
+				position: relative;
+			}
+			.iframe-container iframe 
+			{
+				border: 0;
+                height: 90%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
 			}
 		</style>
 	</head>
-	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-			<img align="center" border="" src="images/Header-Logo.gif" width="100%" alt="" class="background">
-		<table width="100%" height="100%" border="1">
-			<tbody>
-				<tr height="20%">
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td background="" align="center" valign="top">
-						<button type="button" onclick="content.location.href='pages/syllabus.html';" target="content" style="background-color: red; font-family: calibri,'Font Awesome 5 Free'; font-size: auto;">Syllabus</button>
-						<br>
-					</td>
-					<td width="20%">&nbsp;</td>
-				</tr>
-				<tr height="100%">
-					<td width="2%">&nbsp;</td>
-					<td>&nbsp;</td>
-					<td width="2%">&nbsp;</td>
-					<td>&nbsp;</td>
-					<td width="2%">&nbsp;</td>
-					<td rowspan="3" height="100%" width="90%" valign="top">
-						<iframe frameborder="0" name="content" border="0" height="100%" width="90%" src="pages/syllabus.html">Your internet browser doesn't support iFrames.<br>You will need to upgrade your browser to use this manual</iframe>
-					</td>
-					<td width="2%">&nbsp;</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td valign="top" align="center" width="10%">
-						<img border="0" src="images/general_choi.JPG" width="75%" alt="">
-						<p>General Choi Hong Hi</p>
-						<p>Founder of Taekwon-do</p>
-					</td>
-					<td>&nbsp;</td>
-					<td valign="top" align="center" width="10%">
-						<img border="0" src="images/Steve.PNG" width="75%" alt="">
-						<p>Sabom Steve Weston</p>
-						<p>Founder/Owner of Southern ITF</p>
-					</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				</tr>
-			</tbody>
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" height="100%">
+	<img align="center" border="" src="images/Header-Logo.gif" width="100%" alt="" class="background">
+	<table style="position:relative; padding-top:13.5%; padding-left:2%; padding-right:10%; padding-bottom:0%;" border="1">
+			<tr>
+				<td style="width:15%; padding:1%;">&nbsp;</td>
+				<td style="width:2%; padding:1%;">&nbsp;</td>
+				<td style="width:15%; padding:1%;">&nbsp;</td>
+				<td style="width:2%; padding:1%;">&nbsp;</td>
+				<td background="" align="center" valign="top" style="width:72%; height:20%;">
+					<button type="button" onclick="content.location.href='pages/syllabus.html';" target="content" style="background-color: red; font-family: calibri,'Font Awesome 5 Free'; font-size: auto;">Syllabus</button>
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:15%; padding:2%;">&nbsp;</td>
+				<td style="width:2%; padding:2%;">&nbsp;</td>
+				<td style="width:15%; padding:2%;">&nbsp;</td>
+				<td style="width:2%; padding:2%;">&nbsp;</td>
+				<td rowspan="3" style="width:100%; height:100%;" valign="top">
+					<div class="iframe-container">
+					<iframe name="content" frameborder="0" border="0" height="100%" width="100%" src="pages/syllabus.html" allowfullscreen>Your internet browser doesn't support iFrames.<br>You will need to upgrade your browser to use this manual</iframe>
+</div>
+				</td>
+			</tr>
+			<tr> 
+				<td valign="top" align="center" style="width:15%; padding:2%;">
+					<img border="0" src="images/general_choi.JPG" width="75%" alt="">
+					<p>General Choi Hong Hi</p>
+					<p>Founder of Taekwon-do</p>
+				</td>
+				<td style="width:2%; padding:2%;">&nbsp;</td>
+				<td valign="top" align="center" style="width:15%; padding:2%;">
+					<img border="0" src="images/Steve.PNG" width="75%" alt="">
+					<p>Sabom Steve Weston</p>
+					<p>Founder/Owner of Southern ITF</p>
+				</td>
+				<td style="width:2%; padding:2%;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="width:15%; padding:1%;">&nbsp;</td>
+				<td style="width:2%; padding:1%;">&nbsp;</td>
+				<td style="width:15%; padding:1%;">&nbsp;</td>
+				<td style="width:2%; padding:1%;">&nbsp;</td>
+			</tr>
 		</table>
 	</body>
 </html>
